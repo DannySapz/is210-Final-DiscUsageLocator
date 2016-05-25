@@ -4,57 +4,39 @@ Disc Usage Locator
 
 This tool is intended to provide a simple and effective means to locate folders utilizing a large portion of a given disc or filesystem.  It will also provide the ability to save the collected file data as a CSV for further analsis and processing.  A planned enhancemet will be to provide the ability to perform mass deletions or file moves to other locations in order to free up space.
 
-Personas
-========
-
-+---------------+--------------------------------+-----------------------------+
-|     Name      |            Details             |            Goals            |
-+===============+================================+=============================+
-| Lena the APN  | Busy health care professional, | Needs to be able to save    |
-|               | very reliant on laptop for     | data and pictures from her  |
-|               | email and web. Doesn't have    | phone and handle email as   |
-|               | time to upgrade laptop or      | well as browse the web.     |
-|               | storage or to do a lot of      | "I just want it to work and |
-|               | application customizations.    | it needs to be simple"      |
-+---------------+--------------------------------+-----------------------------+
-        
-
-Problem Scenarios
+Required Elements
 =================
 
-+------------------+------------------------------+-----------------------------+
-| Problem Scenario |     Current Alternatives     |      Value Proposition      |
-+==================+==============================+=============================+
-| Lena keeps       | When disc drive fills up it  | A utility that will quickly |
-| filling up the   | requires checking properties | summarize the storage used  |
-| disc but can't   | for each folder to identify  | by each folder in a hier-   |
-| always find what | the folders that are using   | archical means so the       |
-| is using it up.  | the most storage so files    | greatest usage can be seen  |
-|                  | can be moved off or deleted. | quickly and drilled down.   |
-+------------------+------------------------------+-----------------------------+
+To run the Disc Usage Locator program you will need the source file, disc_usage.py and the image file, check.png, which is used in the directory tree display to indicate selected entries.
+
+How to install
+==============
+
+You can either use GIT to clone this repository to your execution environment or download the GIT zip file and extract the identified required files.
+
+..code:: console
+
+    $ git clone https://github.com/BillSass/is210-Final-DiscUsageLocator
 
 
-User Stories
-============
+How to execute
+==============
 
-Lena and Her Laptop
-^^^^^^^^^^^^^^^^^^^
+The Python program must be invoked from the same folder containing the check.png file (this file must be in the current-working-directory).  The invocation can be through IDLE (run) or via the Python terminal command.  There are no invocation parameters:
 
-As Lena the novice PC user I want to be able to quickly identify which folders are using the most space and a means to easily manage it so I can quickly resolve space shortages on my hard drive.
+..code:: console
 
+    $ python disc_usage.py
 
-Acceptance Stories
-^^^^^^^^^^^^^^^^^^
+Known Restrictions or Issues
+============================
 
-Acceptance Story Name
-`````````````````````
+#. Due to time restrictions and for safety reasons, the file Delete and Move actions have not been implemented and so the associated action radio buttons have been disabled.
 
-::
+#. Depending on the number of files and sub-directories under the selected folder is can take several seconds and even a minute or more, before the directory tree display is presented.
 
-    Given [some context]
-        And [some additional context]
-        ...
-    When [event]
-    Then [outcome]
-        And [additional outcome]
-        ...
+#. There is a delay in presenting the "processing" status message on the first dialog window (following Start-ing the directory processing. 
+
+#. Related to the previous issue, when the dialog returns from the directory tree display back to the folder selection dialog, the command buttons, especially Quit, need to be clicked twice.  I have not yet been able to diagnose the cause.
+
+Please let me know if you encounter any other issues.
