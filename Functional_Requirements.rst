@@ -46,15 +46,12 @@ As Lena the novice PC user I want to be able to quickly identify which folders a
 Acceptance Stories
 ^^^^^^^^^^^^^^^^^^
 
-Acceptance Story Name
+Scenario 1 Locating Folders Using Large Amounts of Disc Space
 `````````````````````
 
-::
+Given I have noticed the free space on a disc drive is becoming low, 
+And it does not make sense to purchase a larger disc for this device,
+When I wish to identify large files and folders containing a large number of files
+Then a significant amount of space can be released quickly and easily,
+And information can be collected and saved so further analysis can be performed to identify other areas for space reclamation.
 
-    Given [some context]
-        And [some additional context]
-        ...
-    When [event]
-    Then [outcome]
-        And [additional outcome]
-        ...
