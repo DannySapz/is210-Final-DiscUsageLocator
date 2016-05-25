@@ -14,7 +14,7 @@ How to install
 
 You can either use GIT to clone this repository to your execution environment or download the GIT zip file and extract the identified required files.
 
-..code:: console
+.. code:: console
 
     $ git clone https://github.com/BillSass/is210-Final-DiscUsageLocator
 
@@ -24,7 +24,7 @@ How to execute
 
 The Python program must be invoked from the same folder containing the check.png file (this file must be in the current-working-directory).  The invocation can be through IDLE (run) or via the Python terminal command.  There are no invocation parameters:
 
-..code:: console
+.. code:: console
 
     $ python disc_usage.py
 
